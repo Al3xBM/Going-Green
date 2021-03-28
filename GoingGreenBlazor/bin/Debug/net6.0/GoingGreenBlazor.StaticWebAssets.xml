@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="D:\Anul III\2\TSP.NET\GoingGreenBlazor\bin\Debug\net6.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="D:\Anul III\2\TSP.NET\GoingGreenBlazor\obj\Debug\net6.0\scopedcss\bundle\" />
+</StaticWebAssets>
