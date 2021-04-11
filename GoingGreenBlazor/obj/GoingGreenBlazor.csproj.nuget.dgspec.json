@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Anul III\\2\\TSP.NET\\GoingGreenBlazor\\GoingGreenBlazor.csproj": {}
+    "D:\\Git Repos\\Going-Green\\GoingGreenBlazor\\GoingGreenBlazor.csproj": {}
   },
   "projects": {
-    "D:\\Anul III\\2\\TSP.NET\\GoingGreenBlazor\\GoingGreenBlazor.csproj": {
+    "D:\\Git Repos\\Going-Green\\GoingGreenBlazor\\GoingGreenBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Anul III\\2\\TSP.NET\\GoingGreenBlazor\\GoingGreenBlazor.csproj",
+        "projectUniqueName": "D:\\Git Repos\\Going-Green\\GoingGreenBlazor\\GoingGreenBlazor.csproj",
         "projectName": "GoingGreenBlazor",
-        "projectPath": "D:\\Anul III\\2\\TSP.NET\\GoingGreenBlazor\\GoingGreenBlazor.csproj",
-        "packagesPath": "C:\\Users\\ioant\\.nuget\\packages\\",
-        "outputPath": "D:\\Anul III\\2\\TSP.NET\\GoingGreenBlazor\\obj\\",
+        "projectPath": "D:\\Git Repos\\Going-Green\\GoingGreenBlazor\\GoingGreenBlazor.csproj",
+        "packagesPath": "C:\\Users\\aliba\\.nuget\\packages\\",
+        "outputPath": "D:\\Git Repos\\Going-Green\\GoingGreenBlazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ioant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1811,19 +1811,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ioant\\.nuget\\packages\\": {}
+    "C:\\Users\\aliba\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Anul III\\2\\TSP.NET\\UserService\\UserService.csproj",
+      "projectUniqueName": "D:\\Git Repos\\Going-Green\\UserService\\UserService.csproj",
       "projectName": "UserService",
-      "projectPath": "D:\\Anul III\\2\\TSP.NET\\UserService\\UserService.csproj",
-      "packagesPath": "C:\\Users\\ioant\\.nuget\\packages\\",
-      "outputPath": "D:\\Anul III\\2\\TSP.NET\\UserService\\obj\\",
+      "projectPath": "D:\\Git Repos\\Going-Green\\UserService\\UserService.csproj",
+      "packagesPath": "C:\\Users\\aliba\\.nuget\\packages\\",
+      "outputPath": "D:\\Git Repos\\Going-Green\\UserService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ioant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -65,29 +65,29 @@ namespace UserService.Services
             return user;
         }
 
-        public void Update(User userParam, string password = null)
+        public void Update(User user, string password = null)
         {
-            var user = _context.Users.Find(userParam.Id);
+            var userPar = _context.Users.Find(user.Id);
 
-            if (user == null)
+            if (userPar == null)
                 throw new UserException("User not found");
 
             // update email if it has changed
-            if (!string.IsNullOrWhiteSpace(userParam.Email) && userParam.Email != user.Email)
+            if (!string.IsNullOrWhiteSpace(user.Email) && user.Email != userPar.Email)
             {
                 // throw error if the new email is already taken
-                if (_context.Users.Any(x => x.Email == userParam.Email))
-                    throw new UserException("email " + userParam.Email + " is already taken");
+                if (_context.Users.Any(x => x.Email == user.Email))
+                    throw new UserException("email " + user.Email + " is already taken");
 
-                user.Email = userParam.Email;
+                userPar.Email = user.Email;
             }
 
             // update user properties if provided
-            if (!string.IsNullOrWhiteSpace(userParam.FirstName))
-                user.FirstName = userParam.FirstName;
+            if (!string.IsNullOrWhiteSpace(user.FirstName))
+                userPar.FirstName = user.FirstName;
 
-            if (!string.IsNullOrWhiteSpace(userParam.LastName))
-                user.LastName = userParam.LastName;
+            if (!string.IsNullOrWhiteSpace(user.LastName))
+                userPar.LastName = user.LastName;
 
             // update password if provided
             if (!string.IsNullOrWhiteSpace(password))
@@ -95,11 +95,11 @@ namespace UserService.Services
                 byte[] passwordHash, passwordSalt;
                 CreatePasswordHash(password, out passwordHash, out passwordSalt);
 
-                user.PasswordHash = passwordHash;
-                user.PasswordSalt = passwordSalt;
+                userPar.PasswordHash = passwordHash;
+                userPar.PasswordSalt = passwordSalt;
             }
 
-            _context.Users.Update(user);
+            _context.Users.Update(userPar);
             _context.SaveChanges();
         }
 

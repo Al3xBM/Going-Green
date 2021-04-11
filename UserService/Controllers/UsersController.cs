@@ -22,8 +22,8 @@ namespace UserService.Controllers
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-        private IUserService _userService;
-        private IMapper _mapper;
+        private readonly IUserService _userService;
+        private readonly IMapper _mapper;
         private readonly AppSettings _appSettings;
 
         public UsersController(
@@ -79,7 +79,6 @@ namespace UserService.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            //HttpContext.Session.SetString("JWT", tokenString);
             HttpContext.Response.Cookies.Append("JWT", tokenString);
 
             // return basic user info and authentication token

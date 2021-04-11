@@ -8,7 +8,6 @@ using UserService.Services;
 using UserService.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using System;
 
 using System.Collections.Generic;
 
