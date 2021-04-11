@@ -1,0 +1,6 @@
+projectKey=Going-Green
+serverUrl=http://localhost:9000
+serverVersion=8.7.1.42226
+dashboardUrl=http://localhost:9000/dashboard?id=Going-Green
+ceTaskId=AXh-BvDdRqbb3o-cbivK
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXh-BvDdRqbb3o-cbivK
