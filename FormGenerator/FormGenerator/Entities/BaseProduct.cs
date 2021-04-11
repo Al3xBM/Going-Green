@@ -18,5 +18,7 @@ namespace FormGenerator.Entities
 
         public float Weight { get; set; }
 
+        public string Type { get; set; }
+
     }
 }
