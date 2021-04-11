@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using FormGenerator.Entities;
 using FormGenerator.Data;
+using System;
+using System.Reflection;
 
 namespace FormGenerator.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class RepositoryController : ControllerBase
     {
@@ -31,9 +32,28 @@ namespace FormGenerator.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] BaseProduct BaseProduct)
+        public void Post([FromBody] Dictionary<string, string> product) // BaseProduct BaseProduct)
         {
-            _repository.Create(BaseProduct);
+            var listOfProducts = ProductList.GetAllProductTypes();
+
+            foreach (var type in listOfProducts)
+            {
+                if (type.Name == product["Type"])
+                {
+                    var instance = Activator.CreateInstance(type);
+                    
+                    foreach(var prop in product)
+                    {
+                        PropertyInfo propInfo = type.GetProperty(prop.Key);
+                        var val = ProductList.CastPropertyValue(propInfo, prop.Value);
+                        propInfo.SetValue(instance, val);
+                    }
+
+                    _repository.Create((BaseProduct)instance);
+                    break;
+                }
+            }
+
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using FormGenerator.Entities;
+﻿using FormGenerator.Data;
+using FormGenerator.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace FormGenerator.Controllers
@@ -10,23 +12,43 @@ namespace FormGenerator.Controllers
     public class FormController : ControllerBase
     {
         [HttpPost]
-        public ActionResult<dynamic> GetFormFields(string applienceCategory)
+        public ActionResult<List<string>> GetFormFields([FromBody]string applienceCategory)
+        {
+            var listOfProducts = ProductList.GetAllProductTypes();
+
+            List<string> properties = new List<string>();
+
+            foreach ( var type in listOfProducts )
+            {
+                if (type.Name == applienceCategory)
+                {
+                    foreach (var prop in type.GetProperties())
+                    {
+                        properties.Add(prop.Name);
+                    }
+                    break;
+                }
+            }
+
+            properties.Remove("ID");
+            properties.Remove("Type");
+
+            return properties;
+        }
+
+        [HttpGet]
+        public ActionResult<List<string>> GetAllProductTypes()
         {
             var listOfProducts = (
                       from domainAssembly in AppDomain.CurrentDomain.GetAssemblies()
                       from assemblyType in domainAssembly.GetTypes()
                       where typeof(BaseProduct).IsAssignableFrom(assemblyType)
-                      select assemblyType
+                      select assemblyType.Name
                   ).ToList();
 
+            listOfProducts.Remove("BaseProduct");
 
-            var something = listOfProducts[0];
-
-            var instance = Activator.CreateInstance(listOfProducts[1]);
-
-            return instance;
+            return listOfProducts;
         }
-
-
     }
 }

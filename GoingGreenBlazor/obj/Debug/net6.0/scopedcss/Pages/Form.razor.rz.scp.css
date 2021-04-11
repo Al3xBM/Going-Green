@@ -1,0 +1,12 @@
+.container[b-01othlj45i] {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.product-property-fields[b-01othlj45i] {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: red;
+}

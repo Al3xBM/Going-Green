@@ -1300,3 +1300,4 @@ D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\GoingGreenBlazor.cspr
 D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\GoingGreenBlazor.dll
 D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\ref\GoingGreenBlazor.dll
 D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\GoingGreenBlazor.pdb
+D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\scopedcss\Pages\Form.razor.rz.scp.css

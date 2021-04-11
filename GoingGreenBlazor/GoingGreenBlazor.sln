@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserService", "..\UserServi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserServiceTest", "..\UserServiceTest\UserServiceTest.csproj", "{6AE4F3B3-84CB-45A6-9564-2ABB4529793D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormGenerator", "..\FormGenerator\FormGenerator\FormGenerator.csproj", "{8EF08E27-DC88-47F3-B2EA-AB6EABDCA3C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6AE4F3B3-84CB-45A6-9564-2ABB4529793D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AE4F3B3-84CB-45A6-9564-2ABB4529793D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AE4F3B3-84CB-45A6-9564-2ABB4529793D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF08E27-DC88-47F3-B2EA-AB6EABDCA3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF08E27-DC88-47F3-B2EA-AB6EABDCA3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF08E27-DC88-47F3-B2EA-AB6EABDCA3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF08E27-DC88-47F3-B2EA-AB6EABDCA3C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -46,6 +46,12 @@ build_metadata.AdditionalFiles.GeneratedOutputFullPath = D:\Git Repos\Going-Gree
 build_metadata.AdditionalFiles.GeneratedDeclarationFullPath = D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\RazorDeclaration\_Imports.razor.g.cs
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Git Repos/Going-Green/GoingGreenBlazor/Pages/Form.razor]
+build_metadata.AdditionalFiles.TargetPath = Pages\Form.razor
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\Razor\Pages\Form.razor.g.cs
+build_metadata.AdditionalFiles.GeneratedDeclarationFullPath = D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\RazorDeclaration\Pages\Form.razor.g.cs
+build_metadata.AdditionalFiles.CssScope = b-01othlj45i
+
 [D:/Git Repos/Going-Green/GoingGreenBlazor/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Pages\Login.razor
 build_metadata.AdditionalFiles.GeneratedOutputFullPath = D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\Razor\Pages\Login.razor.g.cs

@@ -1,0 +1,91 @@
+﻿@page "/form"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@using GoingGreenBlazor.Models
+
+<h3>Complete the form below to recieve your box</h3>
+
+<EditForm Model="@Formular" class="container" OnValidSubmit="@OnSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <select class="form-control" @onchange=@GetProductProperties>
+    <option>--select--</option>
+    @foreach (var type in productTypes)
+    {
+        <option value="@type">@type</option>
+    }
+    </select>
+
+    <div class="product-property-fields">
+        @foreach( var prop in ProductProperties)
+        {
+            <label for="@prop"><b>@prop</b></label>
+            <input @onchange="@(e => SetValueInsideDictionary(e, @prop))" type="string" placeholder="@prop" />
+        }
+    </div>
+
+    <button type="submit">Submit</button>
+
+    <div class="form_output" style="visibility: hidden;">@TextOutput</div>
+</EditForm>
+
+@code {
+    List<string> productTypes = new List<string>() { "one", "two", "three" };
+    public Formular Formular { get; set; } = new Formular();
+    public string TextOutput { get; set; } = "this is a string";
+    public List<string> ProductProperties { get; set; } = new List<string>() { };
+    public Dictionary<string, string> InputFields = new Dictionary<string, string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var LoggedIn = await localStorage.ContainKeyAsync("token");
+        if (!LoggedIn)
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            this.productTypes = await Http.GetFromJsonAsync<List<string>>($"{@Configuration["FormGenerator"]}/Form");
+        }
+    }
+
+    public async Task OnSubmit()
+    {
+        InputFields.Add("Type", Formular.Type);
+
+        await Http.PostAsJsonAsync($"{@Configuration["FormGenerator"]}/Repository", InputFields);
+    }
+
+    public async Task GetProductProperties(ChangeEventArgs e)
+    {
+        this.Formular.Type = e.Value.ToString();
+
+        var res = await Http.PostAsJsonAsync($"{@Configuration["FormGenerator"]}/Form", e.Value);
+
+        List<string> props = await res.Content.ReadFromJsonAsync<List<string>>();
+
+        this.ProductProperties = props;
+
+        ResetDictionary(props);
+    }
+
+    public void SetValueInsideDictionary(ChangeEventArgs e, string field)
+    {
+        this.InputFields[field] = e.Value.ToString();
+    }
+
+    public void ResetDictionary(List<string> props)
+    {
+        this.InputFields = new Dictionary<string, string>();
+
+        foreach( var prop in props )
+        {
+            this.InputFields.Add(prop, "");
+        }
+    }
+
+}
