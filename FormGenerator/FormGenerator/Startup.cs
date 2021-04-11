@@ -25,7 +25,7 @@ namespace FormGenerator
             services.AddDbContext<DataContext>(options => {
                 options.UseSqlite(this.Configuration.GetConnectionString("DefaultConnection"));
             });
-
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

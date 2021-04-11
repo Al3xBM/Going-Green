@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace FormGenerator.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class FormController : ControllerBase
     {

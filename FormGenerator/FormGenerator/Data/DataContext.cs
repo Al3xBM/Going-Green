@@ -1,5 +1,4 @@
-﻿using System;
-using FormGenerator.Entities;
+﻿using FormGenerator.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace FormGenerator.Data
@@ -13,7 +12,13 @@ namespace FormGenerator.Data
         {
 
         }
+        public DbSet<Fridge> Fridges { get; set; }
+
+        public DbSet<Television> Televisions { get; set; }
+        
+
         public DbSet<BaseProduct> Products { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
