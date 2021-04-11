@@ -23,8 +23,10 @@
     <div class="product-property-fields">
         @foreach( var prop in ProductProperties)
         {
-            <label for="@prop"><b>@prop</b></label>
-            <input @onchange="@(e => SetValueInsideDictionary(e, @prop))" type="string" placeholder="@prop" />
+            <div class="row">
+            <label class="productColumnInput leftColumn" for="@prop"><b>@prop</b></label>
+            <input class="productColumnInput rightColumn" @onchange="@(e => SetValueInsideDictionary(e, @prop))" type="string" placeholder="@prop" />
+            </div>
         }
     </div>
 
