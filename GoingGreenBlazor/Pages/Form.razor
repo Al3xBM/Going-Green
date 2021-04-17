@@ -57,9 +57,11 @@
 
     public async Task OnSubmit()
     {
-        InputFields.Add("Type", Formular.Type);
+        this.InputFields.Add("Type", Formular.Type);
 
         await Http.PostAsJsonAsync($"{@Configuration["FormGenerator"]}/Repository", InputFields);
+
+        this.InputFields = new Dictionary<string, string>();
     }
 
     public async Task GetProductProperties(ChangeEventArgs e)

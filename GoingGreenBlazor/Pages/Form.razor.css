@@ -23,3 +23,7 @@
     width: 69%;
     text-align: center;
 }
+
+[class*='product-property-fields'] {
+    background-color: white;
+}

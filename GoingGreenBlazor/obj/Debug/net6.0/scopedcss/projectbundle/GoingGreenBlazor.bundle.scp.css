@@ -2,16 +2,33 @@
 
 /* /Pages/Form.razor.rz.scp.css */
 .container[b-01othlj45i] {
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-property-fields[b-01othlj45i] {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: red;
+}
+
+.productColumnInput[b-01othlj45i] {
+}
+
+.row[b-01othlj45i]{
+    width: 75%;
+    margin: 5px auto 5px auto;
+}
+
+.leftColumn[b-01othlj45i] {
+    width: 29%;
+}
+
+.rightColumn[b-01othlj45i]{
+    width: 69%;
+    text-align: center;
+}
+
+[class*='product-property-fields'][b-01othlj45i] {
+    background-color: white;
 }
 /* /Pages/Login.razor.rz.scp.css */
 /* /Pages/Register.razor.rz.scp.css */

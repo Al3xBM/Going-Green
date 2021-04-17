@@ -35,5 +35,40 @@ namespace FormGenerator.Data
             else
                 return Convert.ChangeType(value, property.PropertyType);
         }
+
+        public static List<string> GetAllProductNames()
+        {
+            return (
+                  from domainAssembly in AppDomain.CurrentDomain.GetAssemblies()
+                  from assemblyType in domainAssembly.GetTypes()
+                  where typeof(BaseProduct).IsAssignableFrom(assemblyType)
+                  select assemblyType.Name
+              ).ToList();
+        }
+
+        public static List<string> GetProductProperties(string applienceCategory)
+        {
+            var listOfProducts = ProductList.GetAllProductTypes();
+
+            List<string> properties = new List<string>();
+
+            foreach (var type in listOfProducts)
+            {
+                if (type.Name == applienceCategory)
+                {
+                    foreach (var prop in type.GetProperties())
+                    {
+                        properties.Add(prop.Name);
+                    }
+                    break;
+                }
+            }
+
+            properties.Remove("ID");
+            properties.Remove("Type");
+
+            return properties;
+        }
     }
+
 }

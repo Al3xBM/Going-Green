@@ -20,5 +20,7 @@ namespace FormGenerator.Entities
 
         public string Type { get; set; }
 
+        public string ImageURL { get; set; }
+
     }
 }

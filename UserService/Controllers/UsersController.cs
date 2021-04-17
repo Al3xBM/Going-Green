@@ -61,7 +61,7 @@ namespace UserService.Controllers
         public IActionResult Authenticate([FromBody] AuthenticateModel model)
         {
             var user = _userService.Authenticate(model.Email, model.Password);
-            Console.WriteLine(model.Password);
+            // Console.WriteLine(model.Password);
             if (user == null)
                 return Unauthorized(new { message = "Email or password is incorrect" });
 
