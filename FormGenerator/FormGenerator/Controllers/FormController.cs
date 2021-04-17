@@ -1,9 +1,6 @@
 ﻿using FormGenerator.Data;
-using FormGenerator.Entities;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace FormGenerator.Controllers
 {
@@ -14,13 +11,13 @@ namespace FormGenerator.Controllers
         [HttpPost]
         public ActionResult<List<string>> GetFormFields([FromBody]string applienceCategory)
         { 
-            return ProductList.GetProductProperties(applienceCategory);
+            return new ProductList().GetProductProperties(applienceCategory);
         }
 
         [HttpGet]
         public ActionResult<List<string>> GetAllProductTypes()
         {
-            var listOfProducts = ProductList.GetAllProductNames();
+            var listOfProducts =new ProductList().GetAllProductNames();
 
             listOfProducts.Remove("BaseProduct");
 

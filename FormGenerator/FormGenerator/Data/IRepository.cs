@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using FormGenerator.Entities;
-using Microsoft.VisualBasic.CompilerServices;
+using System.Threading.Tasks;
 
 namespace FormGenerator.Data
 {
-    public interface IRepository<T> where T : BaseProduct
+    public interface IRepository<T> where T : class, new()
     {
-        T GetById(int id);
+        Task<T> GetById(Guid id);
         IEnumerable<T> GetAll();
-        public void Create(T entity);
+        Task<T> CreateAsync(T entity);
+        Task<T> UpdateAsync(T entity);
+        Task<T> DeleteAsync(T entity);
+
     }
 }

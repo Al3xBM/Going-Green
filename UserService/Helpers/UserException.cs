@@ -1,6 +1,5 @@
 using System;
 using System.Globalization;
-using System.Net.Cache;
 using System.Runtime.Serialization;
 
 namespace UserService.Helpers

@@ -6,9 +6,9 @@ using FormGenerator.Entities;
 
 namespace FormGenerator.Data
 {
-    public static class ProductList
+    public class ProductList
     {
-        public static List<Type> GetAllProductTypes()
+        public List<Type> GetAllProductTypes()
         {
             return (
                       from domainAssembly in AppDomain.CurrentDomain.GetAssemblies()
@@ -18,7 +18,7 @@ namespace FormGenerator.Data
                   ).ToList();
         }
 
-        public static object CastPropertyValue(PropertyInfo property, string value)
+        public object CastPropertyValue(PropertyInfo property, string value)
         {
             if (property == null || String.IsNullOrEmpty(value))
                 return null;
@@ -36,7 +36,7 @@ namespace FormGenerator.Data
                 return Convert.ChangeType(value, property.PropertyType);
         }
 
-        public static List<string> GetAllProductNames()
+        public List<string> GetAllProductNames()
         {
             return (
                   from domainAssembly in AppDomain.CurrentDomain.GetAssemblies()
@@ -46,9 +46,9 @@ namespace FormGenerator.Data
               ).ToList();
         }
 
-        public static List<string> GetProductProperties(string applienceCategory)
+        public List<string> GetProductProperties(string applienceCategory)
         {
-            var listOfProducts = ProductList.GetAllProductTypes();
+            var listOfProducts = GetAllProductTypes();
 
             List<string> properties = new List<string>();
 

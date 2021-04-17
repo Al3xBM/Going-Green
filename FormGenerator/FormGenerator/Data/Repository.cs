@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using FormGenerator.Entities;
+using System.Threading.Tasks;
 
 namespace FormGenerator.Data
 {
-    public class Repository<T> : IRepository<T> where T : BaseProduct
+    public class Repository<T> : IRepository<T> where T : class, new()
     {
         public Repository(DataContext context)
         {
@@ -14,32 +13,89 @@ namespace FormGenerator.Data
 
         public DataContext _context { get; }
 
-        public void Create(T entity)
+        public async Task<T> CreateAsync(T entity)
         {
-            _context.Set<T>().Add(entity);
-            _context.SaveChanges();
+            if (entity == null)
+            {
+                throw new ArgumentNullException($"{nameof(CreateAsync)} entity must not be null");
+            }
+            try
+            {
+                await _context.AddAsync(entity);
+                await _context.SaveChangesAsync();
+                return entity;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"{nameof(CreateAsync)} could not be saved:{ex.Message}");
+            }
         }
 
-        public void Delete(T entity)
+        public async Task<T> DeleteAsync(T entity)
         {
-            _context.Set<T>().Remove(entity);
-            _context.SaveChanges();
+            if (entity == null)
+            {
+                throw new ArgumentNullException($"{nameof(DeleteAsync)} entity must not be null");
+            }
+            try
+            {
+                _context.Remove(entity);
+                await _context.SaveChangesAsync();
+                return entity;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"{nameof(DeleteAsync)} could not be deleted:{ex.Message}");
+            }
         }
 
         public IEnumerable<T> GetAll()
         {
-            return _context.Set<T>().ToList();
+            try
+            {
+                return _context.Set<T>();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception($"Couldn't retrive entities: {ex.Message}");
+
+            }
         }
 
-        public T GetById(int id)
+        public async Task<T> GetById(Guid id)
         {
-            return _context.Set<T>().Find(id);
+            if (id == Guid.Empty)
+            {
+                throw new ArgumentException($"{nameof(GetById)} id must not be empty");
+            }
+            try
+            {
+                return await _context.FindAsync<T>(id);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception($"Couldn't retrive entity: {ex.Message}");
+            }
         }
 
-        public void Update(T entity)
+        public async Task<T> UpdateAsync(T entity)
         {
-            _context.Set<T>().Update(entity);
-            _context.SaveChanges();
+            if (entity == null)
+            {
+                throw new ArgumentNullException($"{nameof(UpdateAsync)} entity must not be null");
+            }
+            try
+            {
+                _context.Update(entity);
+                await _context.SaveChangesAsync();
+                return entity;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"{nameof(UpdateAsync)} could not be update:{ex.Message}");
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ using FormGenerator.Entities;
 using FormGenerator.Data;
 using System;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace FormGenerator.Controllers
 {
@@ -20,21 +21,21 @@ namespace FormGenerator.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<BaseProduct>> Get()
+        public ActionResult<IEnumerable<BaseProduct>> GetAll()
         {
             return _repository.GetAll().ToList();
         }
 
         [HttpGet("{id}")]
-        public ActionResult<BaseProduct> Get(int id)
+        public async Task<ActionResult<BaseProduct>> Get(Guid id)
         {
-            return this._repository.GetById(id);
+            return await _repository.GetById(id);
         }
 
         [HttpPost]
         public void Post([FromBody] Dictionary<string, string> product) // BaseProduct BaseProduct)
         {
-            var listOfProducts = ProductList.GetAllProductTypes();
+            var listOfProducts =new ProductList().GetAllProductTypes();
 
             foreach (var type in listOfProducts)
             {
@@ -45,11 +46,11 @@ namespace FormGenerator.Controllers
                     foreach(var prop in product)
                     {
                         PropertyInfo propInfo = type.GetProperty(prop.Key);
-                        var val = ProductList.CastPropertyValue(propInfo, prop.Value);
+                        var val =new ProductList().CastPropertyValue(propInfo, prop.Value);
                         propInfo.SetValue(instance, val);
                     }
 
-                    _repository.Create((BaseProduct)instance);
+                    _repository.CreateAsync((BaseProduct)instance);
                     break;
                 }
             }
