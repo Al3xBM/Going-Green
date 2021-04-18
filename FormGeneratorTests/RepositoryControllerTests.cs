@@ -6,6 +6,10 @@ using Xunit;
 using System.Collections.Generic;
 using FormGenerator.Controllers;
 using System.Linq;
+using FakeItEasy;
+using FluentAssertions;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace FormGenerator.Tests
 {
@@ -14,10 +18,14 @@ namespace FormGenerator.Tests
         private readonly Mock<IRepository<BaseProduct>> mock;
         private readonly RepositoryController repositoryController;
         private readonly BaseProduct newBaseProduct;
- 
+        
+       
 
         public RepositoryControllerTests()
         {
+
+
+
             mock = new Mock<IRepository<BaseProduct>>();
             newBaseProduct = new BaseProduct
             {
@@ -48,22 +56,15 @@ namespace FormGenerator.Tests
 
             Assert.Equal(2, response.Value.Count());
         }
-
-        /*
         [Fact]
-        public async void Given_AGuid_WhenGuidIsNotEmpty_Then_GetByIdShouldReturnAProduct()
+        public void Given_AGuid_GetbyId_ThenShouldReturnAProduct()
         {
-            var result = await repository.GetById(Guid.Parse("453b65b4-0287-4dfa-be3c-00c9ef7c2f4d"));
+            var controller = new RepositoryController(A.Fake<Repository<BaseProduct>>());
+                
+            var result = controller.Get(Guid.Parse("453b65b4-0287-4dfa-be3c-00c9ef7c2f7d"));
 
-            result.Should().BeOfType<BaseProduct>();
-
+            result.Result.Should().BeOfType<ActionResult<BaseProduct>>();
         }
-        [Fact]
-        public async void Given_AGuid_WhenGuisIsEmpty_Then_GetByIdShouldReturnException()
-        {
-            await Assert.ThrowsAsync<ArgumentException>(async () => await repository.GetById(Guid.Empty));
-        }*/
-
         public List<BaseProduct> ProductSeed()
         {
             var products = new List<BaseProduct>()

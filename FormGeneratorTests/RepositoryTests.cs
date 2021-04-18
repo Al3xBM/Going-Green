@@ -111,9 +111,9 @@ namespace FormGenerator.Tests
         [Fact]
         public async void Given_AGuid_WhenGuidIsNotEmpty_Then_GetByIdShouldReturnAProduct()
         {
-            var result = await repository.GetById(Guid.Parse("453b65b4-0287-4dfa-be3c-00c9ef7c2f2d"));
+            var result = await repository2.GetById(Guid.Parse("453b65b4-0287-4dfa-be3c-00c9ef7c2f2d"));
 
-            result.Should().BeOfType<BaseProduct>();
+            result.ID.Should().Equals(Guid.Parse("453b65b4-0287-4dfa-be3c-00c9ef7c2f2d"));
 
         }
         [Fact]
