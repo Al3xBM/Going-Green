@@ -57,7 +57,7 @@
             {"password", User.Password},
         };
 
-        HttpResponseMessage res = await Http.PostAsJsonAsync($"{@Configuration["UserService"]}/users/register", req);
+        HttpResponseMessage res = await Http.PostAsJsonAsync($"{@Configuration["UserService"]}/Users/register", req);
 
         if (res.StatusCode == System.Net.HttpStatusCode.OK)
         {

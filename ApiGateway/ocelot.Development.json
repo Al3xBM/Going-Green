@@ -1,0 +1,93 @@
+﻿{
+  "Routes": [
+    // form generator routes
+    {
+      "DownstreamPathTemplate": "/api/v1/Form",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/FormGenerator/Form",
+      "UpstreamhttpsMethod": [ "POST", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Repository",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/FormGenerator/Repository",
+      "UpstreamhttpsMethod": [ "POST", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Repository/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/FormGenerator/Repository/{id}",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
+    // user service route
+    {
+      "DownstreamPathTemplate": "/api/v1/Users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5301
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/UserService/Users",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Users/register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5301
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/UserService/Users/register",
+      "UpstreamhttpsMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Users/authenticate",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5301
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/UserService/Users/authenticate",
+      "UpstreamhttpsMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Users/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5301
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/UserService/Users/{id}",
+      "UpstreamhttpsMethod": [ "DELETE", "PUT", "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5101"
+  }
+}

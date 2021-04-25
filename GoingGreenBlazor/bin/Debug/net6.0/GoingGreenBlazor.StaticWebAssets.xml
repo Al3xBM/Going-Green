@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\ioant\Documents\GitHub\Going-Green\GoingGreenBlazor\bin\Debug\net6.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Users\ioant\Documents\GitHub\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="D:\Git Repos\Going-Green\GoingGreenBlazor\bin\Debug\net6.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="D:\Git Repos\Going-Green\GoingGreenBlazor\obj\Debug\net6.0\scopedcss\bundle\" />
 </StaticWebAssets>

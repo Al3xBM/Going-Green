@@ -7725,19 +7725,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ioant\\.nuget\\packages\\": {}
+    "C:\\Users\\aliba\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\UserServiceTest\\UserServiceTest.csproj",
+      "projectUniqueName": "D:\\Git Repos\\Going-Green\\UserServiceTest\\UserServiceTest.csproj",
       "projectName": "UserServiceTest",
-      "projectPath": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\UserServiceTest\\UserServiceTest.csproj",
-      "packagesPath": "C:\\Users\\ioant\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\UserServiceTest\\obj\\",
+      "projectPath": "D:\\Git Repos\\Going-Green\\UserServiceTest\\UserServiceTest.csproj",
+      "packagesPath": "C:\\Users\\aliba\\.nuget\\packages\\",
+      "outputPath": "D:\\Git Repos\\Going-Green\\UserServiceTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ioant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7751,8 +7751,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\UserService\\UserService.csproj": {
-              "projectPath": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\UserService\\UserService.csproj"
+            "D:\\Git Repos\\Going-Green\\UserService\\UserService.csproj": {
+              "projectPath": "D:\\Git Repos\\Going-Green\\UserService\\UserService.csproj"
             }
           }
         }

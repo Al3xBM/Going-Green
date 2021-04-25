@@ -1256,19 +1256,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ioant\\.nuget\\packages\\": {}
+    "C:\\Users\\aliba\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\FormGenerator\\FormGenerator\\FormGenerator.csproj",
+      "projectUniqueName": "D:\\Git Repos\\Going-Green\\FormGenerator\\FormGenerator\\FormGenerator.csproj",
       "projectName": "FormGenerator",
-      "projectPath": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\FormGenerator\\FormGenerator\\FormGenerator.csproj",
-      "packagesPath": "C:\\Users\\ioant\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\FormGenerator\\FormGenerator\\obj\\",
+      "projectPath": "D:\\Git Repos\\Going-Green\\FormGenerator\\FormGenerator\\FormGenerator.csproj",
+      "packagesPath": "C:\\Users\\aliba\\.nuget\\packages\\",
+      "outputPath": "D:\\Git Repos\\Going-Green\\FormGenerator\\FormGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ioant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
