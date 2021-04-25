@@ -15,7 +15,6 @@ class Upload extends Component {
     }
 
     submitFormular = () => {
-        console.log(this.state.selectedImage);
         const fd = new FormData();
         fd.append('image', this.state.selectedImage);
         axios.post('https://api.imgbb.com/1/upload?expiration=600&key=09c4e6970d9a7d76c9f85ecf10db4403', fd)
@@ -26,7 +25,6 @@ class Upload extends Component {
             var elements = document.getElementById('details').childNodes;
             for(var i = 0, element; element = elements[i++];){
                 if(element.value !== ""){
-                    console.log(element.id)
                     product = {
                         ...product,
                         [element.id] : element.value
@@ -37,7 +35,6 @@ class Upload extends Component {
                 ...product,
                 ImageURL:  response.data.data.url
             }
-            console.log(JSON.stringify(product));
             product = JSON.stringify(product);
 
             axios({ method: 'post',
@@ -60,10 +57,6 @@ class Upload extends Component {
         
     }
 
-    // submitFormular = () => {
-    // }
-
-
     render() {
         return(
             <div id='form' className={classes.containerForm}>
@@ -84,8 +77,6 @@ class Upload extends Component {
             </div>
         );
     }
-
-
 }
 
 export default Upload;

@@ -1,0 +1,16 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.CategoryTitle{
+    text-align: center;
+}
+
+.ButtonsContainer{
+    text-align: center;
+}
+
+.ButtonsContainer button {
+    margin: 20px;
+}

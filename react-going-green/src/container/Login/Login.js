@@ -17,7 +17,6 @@ class Login extends Component {
             Email: this.emailRef.current.value,
             Password: this.passRef.current.value
         }
-        console.log(data);
             axios.post('https://localhost:5001/api/v1/users/authenticate', data)
             .then(response => {
                     localStorage.setItem('isLoggedIn', true)
@@ -59,8 +58,6 @@ class Login extends Component {
             }
     }
 }
-
-
 
 
 const mapStateToProps = state => {
