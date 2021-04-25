@@ -12,11 +12,13 @@ class Upload extends Component {
         this.setState({
             selectedImage: event.target.files[0]
         })
+        console.log(this.state);
     }
 
     submitFormular = () => {
         const fd = new FormData();
         fd.append('image', this.state.selectedImage);
+        // console.log(this.state.selectedImage);
         axios.post('https://api.imgbb.com/1/upload?expiration=600&key=09c4e6970d9a7d76c9f85ecf10db4403', fd)
         .then(response => {
             var product = {
@@ -36,6 +38,8 @@ class Upload extends Component {
                 ImageURL:  response.data.data.url
             }
             product = JSON.stringify(product);
+
+            console.log(product);
 
             axios({ method: 'post',
                     headers: {'Content-Type': 'application/json'},

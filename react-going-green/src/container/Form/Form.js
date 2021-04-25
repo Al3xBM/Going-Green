@@ -6,9 +6,10 @@ import  Specifications from "./StepsForm/Specifications/Specifications";
 import  Contact from "./StepsForm/Contact/Contact";
 import  Review from "./StepsForm/Review/Review";
 import  Submit from "./StepsForm/Submit/Submit";
+import UploadPhoto from "./StepsForm/UploadPhoto/UploadPhoto";
 
 const defaultData = {
-    CategoryField : "TV",
+    Type : "Television",
     Diagonal : "",
     Resolution : "",
     IsSmart : "",
@@ -31,6 +32,7 @@ const steps = [
     {id: 'specification' },
     {id: 'contact' },
     // {id: 'review' },
+    {id: 'photo'},
     {id: 'submit' }
 ]
 
@@ -53,6 +55,8 @@ const Form = () => {
             return <Contact { ...props } />
         // case "review":
         //     return <Review { ...props } />
+        case "photo":
+            return <UploadPhoto { ...props } />
         case "submit":
             return <Submit { ...props } />
     }

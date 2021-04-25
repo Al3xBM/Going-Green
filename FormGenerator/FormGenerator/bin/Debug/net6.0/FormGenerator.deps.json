@@ -284,7 +284,6 @@
           "System.Security.Cryptography.X509Certificates": "6.0.0.0",
           "System.Security.Cryptography.Xml": "6.0.0.0",
           "System.Security": "4.0.0.0",
-          "System.Security.Permissions": "6.0.0.0",
           "System.Security.Principal": "6.0.0.0",
           "System.Security.Principal.Windows": "6.0.0.0",
           "System.Security.SecureString": "6.0.0.0",
@@ -312,7 +311,6 @@
           "System.Web": "4.0.0.0",
           "System.Web.HttpUtility": "6.0.0.0",
           "System.Windows": "4.0.0.0",
-          "System.Windows.Extensions": "6.0.0.0",
           "System.Xml": "4.0.0.0",
           "System.Xml.Linq": "4.0.0.0",
           "System.Xml.ReaderWriter.Reference": "6.0.0.0",
@@ -2656,12 +2654,6 @@
         },
         "compileOnly": true
       },
-      "System.Security.Permissions/6.0.0.0": {
-        "compile": {
-          "System.Security.Permissions.dll": {}
-        },
-        "compileOnly": true
-      },
       "System.Security.Principal/6.0.0.0": {
         "compile": {
           "System.Security.Principal.dll": {}
@@ -2821,12 +2813,6 @@
       "System.Windows/4.0.0.0": {
         "compile": {
           "System.Windows.dll": {}
-        },
-        "compileOnly": true
-      },
-      "System.Windows.Extensions/6.0.0.0": {
-        "compile": {
-          "System.Windows.Extensions.dll": {}
         },
         "compileOnly": true
       },
@@ -4688,11 +4674,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Security.Permissions/6.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
     "System.Security.Principal/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -4824,11 +4805,6 @@
       "sha512": ""
     },
     "System.Windows/4.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.Windows.Extensions/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

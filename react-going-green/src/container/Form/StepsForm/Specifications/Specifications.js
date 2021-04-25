@@ -7,7 +7,7 @@ import { MenuItem } from "@material-ui/core";
 
 const specifications = ( {formData, setForm, navigation} ) => {
  
-    const { Diagonal, Resolution, IsSmart, Brand, Series, EnergyClass, Weight  } = formData;
+    const { Diagonal, Resolution, IsSmart, Brand, Series, Consumption, EnergyClass, Colour, Weight  } = formData;
     console.log(formData);
     return(
         <Container maxWidth="xs">
@@ -67,9 +67,29 @@ const specifications = ( {formData, setForm, navigation} ) => {
                 fullWidth
             />
             <TextField 
+                label="Consumption"
+                name="Consumption"
+                value={Consumption}
+                onChange={setForm}
+                margin="normal"
+                variant="outlined"
+                autoComplete="off"
+                fullWidth
+            />
+            <TextField 
                 label="Energy Class"
                 name="EnergyClass"
                 value={EnergyClass}
+                onChange={setForm}
+                margin="normal"
+                variant="outlined"
+                autoComplete="off"
+                fullWidth
+            />
+            <TextField 
+                label="Colour"
+                name="Colour"
+                value={Colour}
                 onChange={setForm}
                 margin="normal"
                 variant="outlined"

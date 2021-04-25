@@ -107,7 +107,7 @@ const contact = ( {formData, setForm, navigation} ) => {
                     variant="contained" 
                     color="primary" 
                     onClick={ () => navigation.next()}
-                    style={{ marginTop: "1rem" }} >Submit</Button>
+                    style={{ marginTop: "1rem" }} >Next</Button>
             </div>
         </Container>
     );

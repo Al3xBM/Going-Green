@@ -17,7 +17,7 @@ class Login extends Component {
             Email: this.emailRef.current.value,
             Password: this.passRef.current.value
         }
-            axios.post('https://localhost:5001/api/v1/users/authenticate', data)
+            axios.post('https://localhost:5101/api/v1/UserService/Users/authenticate', data)
             .then(response => {
                     localStorage.setItem('isLoggedIn', true)
                     this.props.logIn()
