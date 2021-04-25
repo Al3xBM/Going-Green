@@ -1,0 +1,21 @@
+L
+CD:\Git Repos\Going-Green\UserService\Controllers\UsersController.csutf-8]
+TD:\Git Repos\Going-Green\UserService\Data\Migrations\20210328175331_InitialCreate.csutf-8h
+]D:\Git Repos\Going-Green\UserService\Data\Migrations\20210328175331_InitialCreate.Designer.csutf-8[
+PD:\Git Repos\Going-Green\UserService\Data\Migrations\DataContextModelSnapshot.csutf-8>
+5D:\Git Repos\Going-Green\UserService\Entities\User.csutf-8D
+;D:\Git Repos\Going-Green\UserService\Helpers\AppSettings.csutf-8J
+AD:\Git Repos\Going-Green\UserService\Helpers\AutoMapperProfile.csutf-8D
+;D:\Git Repos\Going-Green\UserService\Helpers\DataContext.csutf-8F
+=D:\Git Repos\Going-Green\UserService\Helpers\UserException.csutf-8O
+FD:\Git Repos\Going-Green\UserService\Models\Users\AuthenticateModel.csutf-8K
+BD:\Git Repos\Going-Green\UserService\Models\Users\RegisterModel.csutf-8I
+@D:\Git Repos\Going-Green\UserService\Models\Users\UpdateModel.csutf-8G
+>D:\Git Repos\Going-Green\UserService\Models\Users\UserModel.csutf-88
+/D:\Git Repos\Going-Green\UserService\Program.csutf-8F
+=D:\Git Repos\Going-Green\UserService\Services\IUserService.csutf-8E
+<D:\Git Repos\Going-Green\UserService\Services\UserService.csutf-88
+/D:\Git Repos\Going-Green\UserService\Startup.csutf-8o
+dD:\Git Repos\Going-Green\UserService\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8\
+QD:\Git Repos\Going-Green\UserService\obj\Debug\net6.0\UserService.AssemblyInfo.csutf-8o
+dD:\Git Repos\Going-Green\UserService\obj\Debug\net6.0\UserService.MvcApplicationPartsAssemblyInfo.csutf-8

@@ -1,0 +1,77 @@
+﻿@page "/login"
+@using GoingGreenBlazor.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+<EditForm model="@User" class="container" OnValidSubmit="@LoginTask">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <h1>Login</h1>
+    <p>Please fill in this form to login.</p>
+
+    <label for="email"><b>Email</b></label>
+    <input @bind-value="User.Email" type="email" placeholder="Email" class="input email" />
+
+    <label for="psw"><b>Password</b></label>
+    <input @bind-value="User.Password" type="password" placeholder="Password" class="input password" minlength="6"/>
+
+    <div class="clearfix">
+        <button type="submit" class="signupbtn">Login</button>
+        @* <button type="submit" class="forgot">Forgot password</button> *@
+    </div>
+
+    <div class="form_output" style="display: @DisplayStyle">@TextOutput</div>
+</EditForm>
+
+@code
+{
+    public LoginUser User { get; set; } = new LoginUser();
+    public string DisplayStyle { get; set; } = "none";
+    public string TextOutput { get; set; } = "this is a string";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var LoggedIn = await localStorage.ContainKeyAsync("token");
+        if(LoggedIn)
+        {
+            NavigationManager.NavigateTo("/home");
+        }
+    }
+
+    public async Task LoginTask()
+    {
+        Dictionary<string, dynamic> req = new Dictionary<string, dynamic>
+        {
+            {"email", User.Email},
+            {"password", User.Password},
+        };
+
+        HttpResponseMessage res = await Http.PostAsJsonAsync($"{@Configuration["UserService"]}/Users/authenticate", req);
+        Dictionary<string, dynamic> dict = await res.Content.ReadFromJsonAsync<Dictionary<string, dynamic>>();
+        
+        if (res.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            await localStorage.SetItemAsync("token", dict["token"]);
+            this.TextOutput = "Successfully logged in.";
+            @* refresh page *@
+            await InvokeAsync(() => {
+                var aTimer = new System.Timers.Timer(1000);
+                aTimer.Elapsed += (sender, args) => {
+                    NavigationManager.NavigateTo("", true);
+                };
+                aTimer.AutoReset = false;
+                aTimer.Enabled = true;
+            });
+        }
+        else
+        {
+            this.TextOutput = "Failed logging in.";
+        }
+        DisplayStyle = "block";
+
+    }
+}
