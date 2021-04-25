@@ -6,6 +6,7 @@ using FormGenerator.Data;
 using System;
 using System.Reflection;
 using System.Threading.Tasks;
+using PricePredictionML.Model;
 
 namespace FormGenerator.Controllers
 {
@@ -36,6 +37,27 @@ namespace FormGenerator.Controllers
         public void Post([FromBody] Dictionary<string, string> product) // BaseProduct BaseProduct)
         {
             var listOfProducts =new ProductList().GetAllProductTypes();
+
+            ModelInput modelInput = new ModelInput();
+
+            PropertyInfo[] properties = typeof(ModelInput).GetProperties();
+            foreach (PropertyInfo property in properties)
+            {
+                if (product.ContainsKey(property.Name))
+                {
+                    var val = new ProductList().CastPropertyValue(property, product[property.Name]);
+                    property.SetValue(modelInput, val);
+                }
+                else
+                {
+                    property.SetValue(modelInput, null);
+                }
+                
+            }
+
+            var pricePrediction = ConsumeModel.Predict(modelInput);
+
+            Console.WriteLine(pricePrediction.Score);
 
             foreach (var type in listOfProducts)
             {

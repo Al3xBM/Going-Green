@@ -1811,19 +1811,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ioant\\.nuget\\packages\\": {}
+    "C:\\Users\\ivasc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\UserService\\UserService.csproj",
+      "projectUniqueName": "C:\\Users\\ivasc\\Documents\\GitHub\\Going-Green\\UserService\\UserService.csproj",
       "projectName": "UserService",
-      "projectPath": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\UserService\\UserService.csproj",
-      "packagesPath": "C:\\Users\\ioant\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ioant\\Documents\\GitHub\\Going-Green\\UserService\\obj\\",
+      "projectPath": "C:\\Users\\ivasc\\Documents\\GitHub\\Going-Green\\UserService\\UserService.csproj",
+      "packagesPath": "C:\\Users\\ivasc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ivasc\\Documents\\GitHub\\Going-Green\\UserService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ioant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ivasc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
