@@ -2,7 +2,7 @@
   "Routes": [
     // form generator routes
     {
-      "DownstreamPathTemplate": "/api/v1/Form",
+      "DownstreamPathTemplate": "/api/{version}/Form",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -10,11 +10,11 @@
           "Port": 5200
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/FormGenerator/Form",
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Form",
       "UpstreamhttpsMethod": [ "POST", "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/v1/Repository",
+      "DownstreamPathTemplate": "/api/{version}/Repository",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -22,11 +22,11 @@
           "Port": 5200
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/FormGenerator/Repository",
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Repository",
       "UpstreamhttpsMethod": [ "POST", "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/v1/Repository/{id}",
+      "DownstreamPathTemplate": "/api/{version}/Repository/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -34,12 +34,12 @@
           "Port": 5200
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/FormGenerator/Repository/{id}",
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Repository/{id}",
       "UpstreamhttpsMethod": [ "GET" ]
     },
     // user service route
     {
-      "DownstreamPathTemplate": "/api/v1/Users",
+      "DownstreamPathTemplate": "/api/{version}/Users",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -47,11 +47,11 @@
           "Port": 5301
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/UserService/Users",
+      "UpstreamPathTemplate": "/api/{version}/UserService/Users",
       "UpstreamhttpsMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/v1/Users/register",
+      "DownstreamPathTemplate": "/api/{version}/Users/register",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -59,11 +59,11 @@
           "Port": 5301
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/UserService/Users/register",
+      "UpstreamPathTemplate": "/api/{version}/UserService/Users/register",
       "UpstreamhttpsMethod": [ "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/api/v1/Users/authenticate",
+      "DownstreamPathTemplate": "/api/{version}/Users/authenticate",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -71,11 +71,11 @@
           "Port": 5301
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/UserService/Users/authenticate",
+      "UpstreamPathTemplate": "/api/{version}/UserService/Users/authenticate",
       "UpstreamhttpsMethod": [ "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/api/v1/Users/{id}",
+      "DownstreamPathTemplate": "/api/{version}/Users/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -83,7 +83,7 @@
           "Port": 5301
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/UserService/Users/{id}",
+      "UpstreamPathTemplate": "/api/{version}/UserService/Users/{id}",
       "UpstreamhttpsMethod": [ "DELETE", "PUT", "GET" ]
     }
   ],
