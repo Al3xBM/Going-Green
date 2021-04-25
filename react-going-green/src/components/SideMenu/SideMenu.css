@@ -1,0 +1,72 @@
+  
+  /* Position and sizing of burger button */
+  .Container [class*="bm-burger-button"] {
+    position: fixed;
+    width: 25px;
+    height: 20px;
+    left: 92px;
+    top: 20px;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .Container [class*="bm-burger-bars"]{
+    background: black;
+  }
+
+
+  /* Color/shape of burger icon bars on hover*/
+  .Container [class*=".bm-burger-bars-hover"] {
+    background: #a90000;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .Container [class*="bm-cross-button"] {
+    height: 24px;
+    width: 24px;
+    background: white;
+  }
+  
+  .Container [class*="bm-cross"] {
+        background: #bdc3c7;
+        /* background: white; */
+  }
+  
+  .Container [class*="bm-menu-wrap"] {
+    background: linear-gradient(white,#6dc800);
+    position: fixed;
+    width: 250px!important;
+    height: 100%;
+  }
+  
+
+  
+  .Container [class*="bm-menu"] {
+    /* background: linear-gradient(white,#6dc800); */
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    overflow: hidden!important;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .Container [class*="bm-morph-shape"] {
+    fill: #373a47;
+  }
+  
+  /* Wrapper for item list */
+  .Container [class*="bm-item-list"] {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+  
+  /* Individual item */
+  .Container [class*="bm-item"] {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+  }
+  
+  /* Styling of overlay */
+  .Container [class*="bm-overlay"] {
+    background: rgba(0, 0, 0, 0.3);
+  }
