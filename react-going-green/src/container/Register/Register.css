@@ -1,18 +1,30 @@
-.LoginContainer {
+.NameContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.NameContainer > div{
+    padding: 0 15px;
+}
+
+.RegisterContainer {
     margin-top: 5vw;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
+.RegisterContainer input {
+    text-align: center;
+}
 
-.LoginInput {
+.RegisterInput {
     padding: 8px 40px;
     margin: 8px 0;
     box-sizing: border-box;
 }
 
-.LoginButton{
+.RegisterButton{
     margin-top:20px;
     font-size: 20px;
     padding: 15px 40px;
@@ -29,15 +41,8 @@
     
 }
 
-.LoginButton:hover{
+.RegisterButton:hover{
     border-radius:10px; 
     background-color:#EAE9EC;
     transition: border-radius 0.2s linear, background-color 0.2s linear;
-}
-
-.RegisterLink {
-    text-decoration: none;
-    color: black;
-    margin-top: 10px;
-    font-size: 12px;
 }
