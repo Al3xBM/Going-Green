@@ -62,7 +62,7 @@ class Register extends Component {
             </div>
             </div>
             <div>
-                <button onClick={this.registerHandler} className={classes.RegisterButton}>REGISTER</button>
+                <button onClick={this.registerHandler} className={classes.RegisterButton}>SIGN UP</button>
             </div>
         </div>
     )}};

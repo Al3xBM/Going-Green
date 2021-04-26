@@ -6,8 +6,6 @@ import Container from "@material-ui/core/Container";
 import axios from 'axios';
 
 
-
-
 const uploadPhoto = ({ formData, setForm, navigation }) => {
     
     var photoURL = "";

@@ -46,7 +46,7 @@ class Login extends Component {
                             <p> Your password </p>
                             <input className={classes.LoginInput} ref={this.passRef} type='password'></input>
                         </div>
-                        <a className={classes.RegisterLink} href='/register'>Do not have an account? Register now</a>
+                        <a className={classes.RegisterLink} href='/register'>Don't have an account? Sign Up</a>
                         <div>
                             <button onClick={this.loginHandler} className={classes.LoginButton}>LOGIN</button>
                         </div>
