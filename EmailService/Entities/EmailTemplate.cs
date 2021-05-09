@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace EmailService.Entities
+﻿namespace EmailService.Entities
 {
     public class EmailTemplate
     {

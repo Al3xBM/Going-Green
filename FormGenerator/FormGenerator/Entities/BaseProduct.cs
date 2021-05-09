@@ -22,5 +22,7 @@ namespace FormGenerator.Entities
 
         public string ImageURL { get; set; }
 
+        public DateTime dateAdded { get; private set; } = DateTime.Now;
+
     }
 }
