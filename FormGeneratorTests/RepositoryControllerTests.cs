@@ -9,7 +9,6 @@ using System.Linq;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace FormGenerator.Tests
 {

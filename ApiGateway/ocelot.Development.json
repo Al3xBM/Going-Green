@@ -85,6 +85,19 @@
       ],
       "UpstreamPathTemplate": "/api/{version}/UserService/Users/{id}",
       "UpstreamhttpsMethod": [ "DELETE", "PUT", "GET" ]
+    },
+    // Email service
+    {
+      "DownstreamPathTemplate": "/api/{version}/EmailService",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5401
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/EmailService/Email/",
+      "UpstreamhttpsMethod": [ "POST" ]
     }
   ],
   "GlobalConfiguration": {
