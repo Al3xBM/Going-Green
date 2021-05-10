@@ -18,7 +18,6 @@ class Upload extends Component {
     submitFormular = () => {
         const fd = new FormData();
         fd.append('image', this.state.selectedImage);
-        // console.log(this.state.selectedImage);
         axios.post('https://api.imgbb.com/1/upload?expiration=600&key=09c4e6970d9a7d76c9f85ecf10db4403', fd)
         .then(response => {
             var product = {
@@ -48,6 +47,13 @@ class Upload extends Component {
                             
             
             }).then(response => {
+                const fd = new FormData();
+                fd.append("price", response);
+                fd.append("to","ali.balan16@gmail.com");
+                axios.post('https://localhost:5200/api/v1/EmailService/Email',fd)
+                .then(response => {
+                    console.log('Mail successfully sended');
+            })
                 console.log('Form successfully added');
             })
             .catch(error => {
