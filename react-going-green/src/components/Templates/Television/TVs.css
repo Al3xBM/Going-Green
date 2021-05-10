@@ -1,0 +1,16 @@
+.containerTVs{
+    /* width: 90%; */
+    /* display: flex; */
+    margin: 0 auto;
+    /* justify-content: center; */
+}
+
+.containerTVs ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.containerTVs ul li {
+    list-style: none;
+    flex: 0 0 33.333333%;
+  }

@@ -11,7 +11,7 @@ class SideMenu extends Component {
                 <a id="home" className={classes.Menu}href="/recycle">Recycle</a>
                 <a id="about" className={classes.Menu} href="/">About</a>
                 <a id="contact" className={classes.Menu} href="/">Contact</a>
-                <a id="upload" className={classes.Menu} href="/upload">Upload Form</a>
+                <a id="upload" className={classes.Menu} href="/shop">Shop</a>
             </Menu>
             </div>
         );

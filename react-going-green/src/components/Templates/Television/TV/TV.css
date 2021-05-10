@@ -1,0 +1,18 @@
+.tvContainer{
+    width: 250px;
+    height: 100px;
+    display: flex;
+    padding: 20px;
+    margin:20px;
+    border: 1px solid #CDCBD1;
+    justify-content: center;
+}
+
+.tvContainer .image img{
+    width: auto;
+    height: 100px;
+}
+
+.tvContainer .specifications {
+    padding: 0 20px;
+}

@@ -37,6 +37,18 @@
       "UpstreamPathTemplate": "/api/{version}/FormGenerator/Repository/{id}",
       "UpstreamhttpsMethod": [ "GET" ]
     },
+    {
+      "DownstreamPathTemplate": "/api/{version}/Repository/category/{category}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Repository/category/{category}",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
     // user service route
     {
       "DownstreamPathTemplate": "/api/{version}/Users",

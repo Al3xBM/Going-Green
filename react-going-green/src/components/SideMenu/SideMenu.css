@@ -32,7 +32,7 @@
   }
   
   .Container [class*="bm-menu-wrap"] {
-    background: linear-gradient(white,#6dc800);
+    background: white;
     position: fixed;
     width: 250px!important;
     height: 100%;
