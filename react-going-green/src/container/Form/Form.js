@@ -9,7 +9,7 @@ import  Submit from "./StepsForm/Submit/Submit";
 import UploadPhoto from "./StepsForm/UploadPhoto/UploadPhoto";
 
 const defaultData = {
-    Type : "Television",
+    // Type : "Television",
     Diagonal : "",
     Resolution : "",
     IsSmart : "",

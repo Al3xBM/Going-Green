@@ -9,9 +9,9 @@ namespace FormGenerator.Controllers
     public class FormController : ControllerBase
     {
         [HttpPost]
-        public ActionResult<List<string>> GetFormFields([FromBody]string applienceCategory)
+        public ActionResult<List<string>> GetFormFields([FromBody]Dictionary<string,string> applienceCategory)
         { 
-            return new ProductList().GetProductProperties(applienceCategory);
+            return new ProductList().GetProductProperties(applienceCategory["Type"]);
         }
 
         [HttpGet]

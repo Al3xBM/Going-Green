@@ -42,7 +42,13 @@ const uploadPhoto = ({ formData, setForm, navigation }) => {
             
             }).then(response => {
                 console.log('Form successfully added');
-                navigation.next()
+                var request = {"to":formData["WorkEmail"],
+                            "price": response["data"].toString()}
+                console.log(request);
+                axios.post('https://localhost:5101/api/v1/EmailService/Email', request)
+                .then(respones => {
+                    navigation.next();
+                })
             })
             .catch(error => {
                 console.log('Something went wrong at sending the form');
