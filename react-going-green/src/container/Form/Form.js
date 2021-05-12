@@ -5,8 +5,8 @@ import  Category from "./StepsForm/Category/Category";
 import  Specifications from "./StepsForm/Specifications/Specifications";
 import  Contact from "./StepsForm/Contact/Contact";
 import  Review from "./StepsForm/Review/Review";
-import  Submit from "./StepsForm/Submit/Submit";
-import UploadPhoto from "./StepsForm/UploadPhoto/UploadPhoto";
+import  Response from "./StepsForm/Response/Response";
+import Submit from "./StepsForm/Submit/Submit";
 
 const defaultData = {
     // Type : "Television",
@@ -32,8 +32,8 @@ const steps = [
     {id: 'specification' },
     {id: 'contact' },
     // {id: 'review' },
-    {id: 'photo'},
-    {id: 'submit' }
+    {id: 'submit'},
+    {id: 'response' }
 ]
 
 
@@ -55,10 +55,10 @@ const Form = () => {
             return <Contact { ...props } />
         // case "review":
         //     return <Review { ...props } />
-        case "photo":
-            return <UploadPhoto { ...props } />
         case "submit":
             return <Submit { ...props } />
+        case "response":
+            return <Response { ...props } />
     }
 
     return (

@@ -1,38 +1,36 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import TV from './TV/TV';
 import classes from './TVs.css';
 import axios from 'axios';
-import { Component } from 'react';
 
-class TVs extends Component {
+
+const TVs = () => {
     
-    state = {
-        Televisions : []
-    };
-    render() {
-    axios.get("https://localhost:5101/api/v1/FormGenerator/Repository/category/Television")
-    .then(response =>{
-        var newTelevisions = []
-        for( var tv of response["data"]){
-            if(tv["type"] !== null && tv["brand"] !== null && tv["series"] !== null && tv["colour"] !== null)
-            newTelevisions = [...newTelevisions,
-                {
-                    "type":tv["type"],
-                    "brand":tv["brand"],
-                    "series":tv["series"],
-                    "colour":tv["colour"],
-                    "imageURL":tv["imageURL"]
-                }    
-            ]
-        }
-        let finalState = {Televisions:[...newTelevisions]};
-        this.setState(finalState);
-    });
-
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        
+        axios.get("https://localhost:5101/api/v1/FormGenerator/Repository")
+        .then(response =>{
+            var devices = [];
+            for( var dev of response["data"]){
+                if(dev["type"] !== null && dev["brand"] !== null && dev["series"] !== null && dev["colour"] !== null)
+                devices = [...devices,
+                    {
+                        "type":dev["type"],
+                        "brand":dev["brand"],
+                        "series":dev["series"],
+                        "colour":dev["colour"],
+                        "imageURL":dev["imageURL"]
+                    }    
+                ]
+            }
+            setItems(devices);
+        });
+    }, []);
     return(
     <div className={classes.containerTVs} >
         <ul>
-            {this.state.Televisions.map(content => (
+            {items.map(content => (
                 <li><TV
                     Image= {content.imageURL}
                     Type= {content.type}
@@ -44,6 +42,6 @@ class TVs extends Component {
         </ul>
     </div>
 )};
-}
+
 
 export default TVs;

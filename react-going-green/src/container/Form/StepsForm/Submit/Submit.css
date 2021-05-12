@@ -1,7 +1,11 @@
-.Response{
-    font-size: 20pt;
-    width: 600px;
-    padding-top: 15vw;
-    margin: auto;
+.CategoryTitle{
     text-align: center;
+}
+
+.ButtonsContainer{
+    text-align: center;
+}
+
+.ButtonsContainer button {
+    margin: 20px;
 }
