@@ -15,7 +15,14 @@ namespace FormGenerator.Data
         public DbSet<Fridge> Fridges { get; set; }
 
         public DbSet<Television> Televisions { get; set; }
-        
+
+        public DbSet<Phone> Phones { get; set; }
+
+        public DbSet<Microwave> Microwaves { get; set; }
+
+        public DbSet<VacuumCleaner> Vacuums { get; set; }
+
+        public DbSet<Blender> Blenders { get; set; }
 
         public DbSet<BaseProduct> Products { get; set; }
 

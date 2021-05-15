@@ -60,6 +60,19 @@ namespace FormGenerator.Data.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("BaseProduct");
                 });
 
+            modelBuilder.Entity("FormGenerator.Entities.Blender", b =>
+                {
+                    b.HasBaseType("FormGenerator.Entities.BaseProduct");
+
+                    b.Property<string>("Power")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Volume")
+                        .HasColumnType("TEXT");
+
+                    b.HasDiscriminator().HasValue("Blender");
+                });
+
             modelBuilder.Entity("FormGenerator.Entities.Fridge", b =>
                 {
                     b.HasBaseType("FormGenerator.Entities.BaseProduct");
@@ -77,7 +90,8 @@ namespace FormGenerator.Data.Migrations
                         .HasColumnType("REAL");
 
                     b.Property<float>("Volume")
-                        .HasColumnType("REAL");
+                        .HasColumnType("REAL")
+                        .HasColumnName("Fridge_Volume");
 
                     b.Property<float>("Width")
                         .HasColumnType("REAL");
@@ -85,12 +99,77 @@ namespace FormGenerator.Data.Migrations
                     b.HasDiscriminator().HasValue("Fridge");
                 });
 
+            modelBuilder.Entity("FormGenerator.Entities.Microwave", b =>
+                {
+                    b.HasBaseType("FormGenerator.Entities.BaseProduct");
+
+                    b.Property<string>("Depth")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("Microwave_Depth");
+
+                    b.Property<string>("Height")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("Microwave_Height");
+
+                    b.Property<string>("Power")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("Microwave_Power");
+
+                    b.Property<string>("Volume")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("Microwave_Volume");
+
+                    b.Property<string>("Width")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("Microwave_Width");
+
+                    b.HasDiscriminator().HasValue("Microwave");
+                });
+
+            modelBuilder.Entity("FormGenerator.Entities.Phone", b =>
+                {
+                    b.HasBaseType("FormGenerator.Entities.BaseProduct");
+
+                    b.Property<string>("Bluetooth")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Camera")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Connectivity")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Diagonal")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FrontalCamera")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Memory")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RAM")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SimSlots")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Software")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Wifi")
+                        .HasColumnType("TEXT");
+
+                    b.HasDiscriminator().HasValue("Phone");
+                });
+
             modelBuilder.Entity("FormGenerator.Entities.Television", b =>
                 {
                     b.HasBaseType("FormGenerator.Entities.BaseProduct");
 
                     b.Property<float>("Diagonal")
-                        .HasColumnType("REAL");
+                        .HasColumnType("REAL")
+                        .HasColumnName("Television_Diagonal");
 
                     b.Property<bool>("IsSmart")
                         .HasColumnType("INTEGER");
@@ -99,6 +178,33 @@ namespace FormGenerator.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasDiscriminator().HasValue("Television");
+                });
+
+            modelBuilder.Entity("FormGenerator.Entities.VacuumCleaner", b =>
+                {
+                    b.HasBaseType("FormGenerator.Entities.BaseProduct");
+
+                    b.Property<string>("Depth")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("VacuumCleaner_Depth");
+
+                    b.Property<string>("Height")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("VacuumCleaner_Height");
+
+                    b.Property<string>("Power")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("VacuumCleaner_Power");
+
+                    b.Property<string>("Volume")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("VacuumCleaner_Volume");
+
+                    b.Property<string>("Width")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("VacuumCleaner_Width");
+
+                    b.HasDiscriminator().HasValue("VacuumCleaner");
                 });
 #pragma warning restore 612, 618
         }

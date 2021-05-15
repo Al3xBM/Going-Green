@@ -14,8 +14,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
-  <ItemGroup>    
-	  <ProjectReference Include="..\..\PricePredicitionML.Model\PricePredictionML.Model.csproj" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\PricePredictionML.Model\PricePredictionML.Model.csproj" />
   </ItemGroup>
 
 </Project>
