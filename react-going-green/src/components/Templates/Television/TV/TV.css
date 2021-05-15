@@ -1,3 +1,8 @@
+.linkClass{
+    color: black;
+    text-decoration: none;
+}
+
 .tvContainer{
     width: 250px;
     height: 100px;

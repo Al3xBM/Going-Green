@@ -1,0 +1,32 @@
+.displaySpecs {
+    text-align: center;
+    background-color: snow;
+    width: 800px;
+    margin:40px auto;
+    padding: 40px 20px;
+    display: flex;
+}
+
+.displaySpecs .imgContainer {
+    width: 400px;
+}
+
+
+.displaySpecs .imgContainer img{
+    width: 100%;
+}
+
+.displaySpecs .specsDetailed{
+    margin:0 auto;
+    margin-top:20px;
+}
+
+.displaySpecs .imgContainer{
+    margin:20px;
+}
+
+
+
+
+
+

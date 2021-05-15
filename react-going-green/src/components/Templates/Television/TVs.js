@@ -16,6 +16,7 @@ const TVs = () => {
                 if(dev["type"] !== null && dev["brand"] !== null && dev["series"] !== null && dev["colour"] !== null)
                 devices = [...devices,
                     {
+                        "id":dev["id"],
                         "type":dev["type"],
                         "brand":dev["brand"],
                         "series":dev["series"],
@@ -32,6 +33,7 @@ const TVs = () => {
         <ul>
             {items.map(content => (
                 <li><TV
+                    Id = {content.id}
                     Image= {content.imageURL}
                     Type= {content.type}
                     Brand= {content.brand}
