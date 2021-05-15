@@ -49,6 +49,78 @@
       "UpstreamPathTemplate": "/api/{version}/FormGenerator/Repository/category/{category}",
       "UpstreamhttpsMethod": [ "GET" ]
     },
+    {
+      "DownstreamPathTemplate": "/api/{version}/Blender/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Blender/{id}",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/Fridge/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Fridge/{id}",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/Microwave/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Microwave/{id}",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/Phone/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Phone/{id}",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/Television/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Television/{id}",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/Vacuum/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/FormGenerator/Vacuum/{id}",
+      "UpstreamhttpsMethod": [ "GET" ]
+    },
     // user service route
     {
       "DownstreamPathTemplate": "/api/{version}/Users",

@@ -29,7 +29,7 @@ const Submit = ({ formData, setForm, navigation }) => {
     var submitFormular = () => {
         const fd = new FormData();
         fd.append('image', photoURL[0]);
-        axios.post('https://api.imgbb.com/1/upload?expiration=600&key=09c4e6970d9a7d76c9f85ecf10db4403', fd)
+        axios.post('https://api.imgbb.com/1/upload?key=09c4e6970d9a7d76c9f85ecf10db4403', fd)
         .then(response => {
             var product = {"ImageURL": response.data.data.url,
                             "Type": formData["Type"]};
