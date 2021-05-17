@@ -22,10 +22,10 @@ namespace FormGenerator.Tests
         private static void Seed(DataContext context)
         {
             var products = new[]
-            {
+            { 
                 new BaseProduct
                 {
-                    ID = Guid.Parse("453b65b4-0287-4dfa-be3c-00c9ef7c2f2d"),
+                    ID = Guid.Parse("453b65b4-0287-4dfa-be3c-00c9ef7c2f0d"),
                     Brand = "Artic",
                     Series = "xv1",
                     Consumption = "123",

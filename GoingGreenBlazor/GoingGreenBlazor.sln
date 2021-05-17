@@ -22,6 +22,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "..\ApiGateway
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PricePredictionML.Model", "..\PricePredictionML.Model\PricePredictionML.Model.csproj", "{78B8A22A-BA0F-46CB-B8AD-B2235DDD02E1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PricePredictionModelTest", "..\PricePredictionModelTest\PricePredictionModelTest.csproj", "{2B7C9BAC-1B5C-449B-A02D-9439C5D69B66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailServiceTests", "..\EmailServiceTests\EmailServiceTests.csproj", "{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +64,14 @@ Global
 		{78B8A22A-BA0F-46CB-B8AD-B2235DDD02E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78B8A22A-BA0F-46CB-B8AD-B2235DDD02E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78B8A22A-BA0F-46CB-B8AD-B2235DDD02E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B7C9BAC-1B5C-449B-A02D-9439C5D69B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7C9BAC-1B5C-449B-A02D-9439C5D69B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7C9BAC-1B5C-449B-A02D-9439C5D69B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7C9BAC-1B5C-449B-A02D-9439C5D69B66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

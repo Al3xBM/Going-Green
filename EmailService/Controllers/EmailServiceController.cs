@@ -18,6 +18,10 @@ namespace EmailService.Controllers
         public void Post([FromBody] Dictionary<string, string> data)
         {
             string from = "goinggreenemailservice@gmail.com"; //To address
+            if (!data.ContainsKey("to"))
+            {
+                throw new ArgumentNullException($"{nameof(Post)} destination mail must not be null");
+            }
             string to = data["to"]; //From address
             MailMessage message = new MailMessage(from, to);
 
