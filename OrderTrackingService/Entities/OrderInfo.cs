@@ -9,7 +9,7 @@ namespace OrderTrackingService.Entities
     {
         public Guid ID { get; set; }
 
-        public float Price { get; set; }
+        public string Price { get; set; }
 
         public string ProductInfo { get; set; }
 

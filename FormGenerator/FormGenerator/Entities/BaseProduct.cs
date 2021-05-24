@@ -24,5 +24,7 @@ namespace FormGenerator.Entities
 
         public DateTime dateAdded { get; private set; } = DateTime.Now;
 
+        public string Price { get; set; }
+
     }
 }
