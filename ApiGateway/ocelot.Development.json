@@ -182,7 +182,7 @@
       ],
       "UpstreamPathTemplate": "/api/{version}/EmailService/Email/",
       "UpstreamhttpsMethod": [ "POST" ]
-    }
+    },
     // Order Tracking service
     {
       "DownstreamPathTemplate": "/api/{version}/OrderTracking",

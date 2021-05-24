@@ -37,7 +37,7 @@ namespace OrderTrackingService
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FormGenerator", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Order Tracking", Version = "v1" });
             });
         }
 
@@ -48,7 +48,7 @@ namespace OrderTrackingService
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FormGenerator v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OrderTracking v1"));
             }
 
             app.UseHttpsRedirection();
