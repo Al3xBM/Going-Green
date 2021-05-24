@@ -183,6 +183,19 @@
       "UpstreamPathTemplate": "/api/{version}/EmailService/Email/",
       "UpstreamhttpsMethod": [ "POST" ]
     }
+    // Order Tracking service
+    {
+      "DownstreamPathTemplate": "/api/{version}/OrderTracking",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5501
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/OrderTrackingService/",
+      "UpstreamhttpsMethod": [ "POST", "GET", "PUT", "DELTE"]
+    }
   ],
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:5101"
