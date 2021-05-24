@@ -7,6 +7,11 @@
     display: flex;
 }
 
+
+.CategoryTitle{
+    text-align: center;
+}
+
 .displaySpecs .imgContainer {
     width: 400px;
 }
@@ -41,6 +46,20 @@
 }
 
 
+.buttonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 
+.finishButton {
+    text-align: center;
+}
+
+.containerClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 

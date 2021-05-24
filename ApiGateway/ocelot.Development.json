@@ -185,7 +185,7 @@
     },
     // Order Tracking service
     {
-      "DownstreamPathTemplate": "/api/{version}/OrderTracking",
+      "DownstreamPathTemplate": "/api/{version}/OrderInfo",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {

@@ -8,7 +8,7 @@ import Homepage from './components/Homepage/Homepage';
 import Shop from './components/Shop/Shop';
 import Register from './container/Register/Register';
 import Description from './components/Templates/ProductDetails/ProductDetails';
-
+import OrderFinished from './components/OrderFinished/OrderFinished';
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
       <Route path='/shop' component={Shop} />
       <Route path='/Register' component={Register} />
       <Route path='/description' component={Description} />
+      <Route path='/order' component={OrderFinished} />
     </div>
     </BrowserRouter>
   );
