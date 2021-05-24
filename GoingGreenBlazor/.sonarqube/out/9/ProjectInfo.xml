@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>EmailServiceTests</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Test</ProjectType>
+  <ProjectGuid>80b595da-2efa-4de1-ab13-42f728d3f0cc</ProjectGuid>
+  <FullPath>D:\Git Repos\Going-Green\EmailServiceTests\EmailServiceTests.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="D:\Git Repos\Going-Green\GoingGreenBlazor\.sonarqube\out\9\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePath">D:\Git Repos\Going-Green\EmailServiceTests\bin\Debug\net6.0\EmailServiceTests.dll.RoslynCA.json|D:\Git Repos\Going-Green\EmailServiceTests\bin\Debug\net6.0\EmailServiceTests.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPath">D:\Git Repos\Going-Green\GoingGreenBlazor\.sonarqube\out\9</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>net6.0</TargetFramework>
+</ProjectInfo>

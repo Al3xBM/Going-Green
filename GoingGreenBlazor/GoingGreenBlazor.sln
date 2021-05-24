@@ -24,7 +24,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PricePredictionML.Model", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PricePredictionModelTest", "..\PricePredictionModelTest\PricePredictionModelTest.csproj", "{2B7C9BAC-1B5C-449B-A02D-9439C5D69B66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailServiceTests", "..\EmailServiceTests\EmailServiceTests.csproj", "{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailServiceTests", "..\EmailServiceTests\EmailServiceTests.csproj", "{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderTrackingService", "..\OrderTrackingService\OrderTrackingService.csproj", "{F45D6ED9-2B26-4849-A477-012D6A0B5B9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +74,10 @@ Global
 		{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B595DA-2EFA-4DE1-AB13-42F728D3F0CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45D6ED9-2B26-4849-A477-012D6A0B5B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45D6ED9-2B26-4849-A477-012D6A0B5B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45D6ED9-2B26-4849-A477-012D6A0B5B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45D6ED9-2B26-4849-A477-012D6A0B5B9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

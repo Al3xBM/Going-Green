@@ -1,5 +1,5 @@
 .displaySpecs {
-    text-align: center;
+    /* text-align: center; */
     background-color: snow;
     width: 800px;
     margin:40px auto;
@@ -17,6 +17,7 @@
 }
 
 .displaySpecs .specsDetailed{
+    width: 35%;
     margin:0 auto;
     margin-top:20px;
 }
@@ -25,6 +26,19 @@
     margin:20px;
 }
 
+.displaySpecs p { 
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.displaySpecs span {
+    width: 100%;
+}
+
+.displaySpecs span:nth-child(2) {
+    text-align: center;
+    background-color: white;
+}
 
 
 

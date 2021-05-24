@@ -30,8 +30,18 @@ const Description = () => {
     idIndex = keys.indexOf("dateAdded");
     keys.splice(idIndex,1);
 
+    function capitalizeFirstLetter(string) {
+        if ( string.includes("_") ) {
+            string = string.split("_")[1];
+        }
+        return (string.charAt(0).toUpperCase() + string.slice(1)).split(/(?=[A-Z])/).join(" ");
+      }
+
+    var isSmart = keys.includes("isSmart");
+    items["isSmart"] = isSmart ? "Yes" : "No"; 
+
     let content = keys.map(content => (
-            <p>{content} : {items[content]}</p>
+            <p><span>{capitalizeFirstLetter(content)}</span> <span>{items[content]}</span></p>
     ));
 
     return(

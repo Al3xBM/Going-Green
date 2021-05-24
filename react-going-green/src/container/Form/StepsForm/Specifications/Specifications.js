@@ -30,7 +30,7 @@ const Specifications = ( {formData, setForm, navigation} ) => {
             <h2 className={classes.CategoryTitle}>Specifications</h2>
             {
             items.map(content => (
-                (content !== "IsSmart" ?
+                (content !== "isSmart" ?
                         <TextField 
                         label={content}
                         name={content}
